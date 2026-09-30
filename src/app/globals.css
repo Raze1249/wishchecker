@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+:root {
+  --tg-bg: #f8fafc;
+  --tg-ink: #0f172a;
+}
+
+@theme {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--tg-bg);
+  color: var(--tg-ink);
+}
+
+/* subtle fade-in for progressively revealed content */
+@keyframes tg-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tg-fade-up {
+  animation: tg-fade-up 0.4s ease both;
+}
+
+.tg-grid-bg {
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(15, 23, 42, 0.06) 1px, transparent 0);
+  background-size: 22px 22px;
+}
